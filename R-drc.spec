@@ -4,7 +4,7 @@
 #
 Name     : R-drc
 Version  : 3.0.1
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/drc_3.0-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/drc_3.0-1.tar.gz
 Summary  : Analysis of Dose-Response Curves
@@ -35,11 +35,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521214442
+export SOURCE_DATE_EPOCH=1523304072
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521214442
+export SOURCE_DATE_EPOCH=1523304072
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
