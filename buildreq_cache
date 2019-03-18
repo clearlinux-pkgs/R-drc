@@ -6,9 +6,13 @@ R-carData
 R-cellranger
 R-forcats
 R-gtools
+R-hms
 R-multcomp
 R-munsell
 R-mvtnorm
 R-plotrix
 R-rio
+R-sandwich
 R-scales
+R-zip
+R-zoo
