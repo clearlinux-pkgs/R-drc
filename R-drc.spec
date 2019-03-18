@@ -4,25 +4,39 @@
 #
 Name     : R-drc
 Version  : 3.0.1
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/drc_3.0-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/drc_3.0-1.tar.gz
 Summary  : Analysis of Dose-Response Curves
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-TH.data
+Requires: R-abind
 Requires: R-car
+Requires: R-carData
+Requires: R-cellranger
+Requires: R-forcats
 Requires: R-gtools
 Requires: R-multcomp
+Requires: R-munsell
+Requires: R-mvtnorm
 Requires: R-plotrix
+Requires: R-rio
 Requires: R-scales
 BuildRequires : R-TH.data
+BuildRequires : R-abind
 BuildRequires : R-car
+BuildRequires : R-carData
+BuildRequires : R-cellranger
+BuildRequires : R-forcats
 BuildRequires : R-gtools
 BuildRequires : R-multcomp
+BuildRequires : R-munsell
+BuildRequires : R-mvtnorm
 BuildRequires : R-plotrix
+BuildRequires : R-rio
 BuildRequires : R-scales
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 No detailed description available
@@ -35,11 +49,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523304072
+export SOURCE_DATE_EPOCH=1552884675
 
 %install
+export SOURCE_DATE_EPOCH=1552884675
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523304072
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -74,8 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library drc|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  drc || :
 
 
 %files
@@ -106,3 +119,9 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/drc/help/paths.rds
 /usr/lib64/R/library/drc/html/00Index.html
 /usr/lib64/R/library/drc/html/R.css
+/usr/lib64/R/library/drc/tests/test1.R
+/usr/lib64/R/library/drc/tests/test1.data1.txt
+/usr/lib64/R/library/drc/tests/test1.w1.txt
+/usr/lib64/R/library/drc/tests/test2.R
+/usr/lib64/R/library/drc/tests/test2.redroot_dose.csv
+/usr/lib64/R/library/drc/tests/test3.R
