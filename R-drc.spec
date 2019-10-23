@@ -4,13 +4,12 @@
 #
 Name     : R-drc
 Version  : 3.0.1
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/drc_3.0-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/drc_3.0-1.tar.gz
 Summary  : Analysis of Dose-Response Curves
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-TH.data
 Requires: R-car
 Requires: R-gtools
 Requires: R-multcomp
@@ -23,6 +22,7 @@ BuildRequires : R-multcomp
 BuildRequires : R-plotrix
 BuildRequires : R-scales
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 No detailed description available
@@ -35,10 +35,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569268090
+export SOURCE_DATE_EPOCH=1571820539
 
 %install
-export SOURCE_DATE_EPOCH=1569268090
+export SOURCE_DATE_EPOCH=1571820539
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
