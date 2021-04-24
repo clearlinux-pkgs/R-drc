@@ -4,7 +4,7 @@
 #
 Name     : R-drc
 Version  : 3.0.1
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/drc_3.0-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/drc_3.0-1.tar.gz
 Summary  : Analysis of Dose-Response Curves
